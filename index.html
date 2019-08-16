@@ -14,6 +14,11 @@
 				{{item}}
 			</li>
 		</ol>
+
+		<select v-model="numbers" multiple size="5">
+			<option v-for="i in 5">{{i}}</option>
+		</select>
+		<p>Среднее арифтметическое: {{average}}</p>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 	<script src="script.js"></script>

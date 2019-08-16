@@ -3,7 +3,8 @@ let vm = new Vue({
 	data:{
 		n:1,
 		list:["HomeWork", "Watch Video"],
-		thing: ""
+		thing: "",
+		numbers: ["1","4"]
 	},
 	methods:{
 		double: function(event){
@@ -17,6 +18,14 @@ let vm = new Vue({
 		},
 		remove: function(index){
 			this.list.splice(index, 1);
+		}
+	},
+	computed:{
+		average: function(){
+			let sum = 0, n = this.numbers.length;
+			for (i in this.numbers)
+				sum += Number(this.numbers[i]);
+			return sum/n;
 		}
 	}
 });
