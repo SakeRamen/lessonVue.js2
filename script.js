@@ -6,7 +6,8 @@ let vm = new Vue({
 		thing: "",
 		numbers: ["1","4"],
 		number: 0,
-		count: 0
+		count: 0,
+		v: true
 	},
 	methods:{
 		double: function(event){
