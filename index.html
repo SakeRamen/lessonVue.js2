@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js 2</title>
+</head>
+<body>
+	<div id="app">
+		<button type="button" v-on:click="double">Удвоить</button>
+		<p>{{n}}</p>
+
+		<input type="text" v-model="thing" v-on:keydown.13="addItem">
+		<ol>
+			<li v-for="(item, i) of list" v-on:click="remove(i)">
+				{{item}}
+			</li>
+		</ol>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
