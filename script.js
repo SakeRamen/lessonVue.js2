@@ -4,7 +4,9 @@ let vm = new Vue({
 		n:1,
 		list:["HomeWork", "Watch Video"],
 		thing: "",
-		numbers: ["1","4"]
+		numbers: ["1","4"],
+		number: 0,
+		count: 0
 	},
 	methods:{
 		double: function(event){
@@ -18,6 +20,14 @@ let vm = new Vue({
 		},
 		remove: function(index){
 			this.list.splice(index, 1);
+		},
+
+		decrease: function(){
+			this.number--;
+		},
+
+		increase: function(){
+			this.number++;
 		}
 	},
 	computed:{
@@ -28,4 +38,9 @@ let vm = new Vue({
 			return sum/n;
 		}
 	}
+});
+
+vm.$watch("number", function(newValue){
+	console.log(newValue);
+	this.count++;
 });
