@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Vue.js 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div id="app">
@@ -26,7 +27,9 @@
 		<p>количество изменений: {{count}}</p>
 
 		<input type="checkbox" v-model="v">
-		<h1 v-show="v">now you see me!</h1>
+		<transiton name= "fade">
+			<h1 v-show="v">now you see me!</h1>
+		</transition>
 		<h1 v-if="v">I am here!</h1>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
